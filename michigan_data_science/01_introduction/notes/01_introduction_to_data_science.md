@@ -78,3 +78,39 @@ Much more limited than large function definitions, but they're good for data cle
 Sequences are structures that we can iterate over. Python lets you create in an abbreviated fashion using list comprehension.
 
 ### Demo: The Numerical Python Library (NumPy)
+
+## Basic Data Processing with Pandas
+
+### Introduction
+
+Pandas is to manipulate, clean and analyze data. It's open source, so you can get a ton of information online. Stack Overflow is probably the best resource for Pandas.
+
+Check out planetpython.org - a blog aggregator for Python news and information. Also check out Data Skeptic, a podcast about data analysis.
+
+### The Series Data Structure
+
+Cross between a list and a dictionary. Order with labels. Think of it as a table with two columns - data and index.
+
+Under the hood, pandas is storing data in a typed array using `numpy`.
+
+Missing data in numpy for efficiency. Nonetype for objects, NaN for numbers.
+
+You can also create series from dictionaries. The index is the key in the dictionary.
+
+### Querying a Series
+
+You can query by numeric location or index label (`iloc()` and `loc()` respectively)
+
+### Querying a DataFrame
+
+Boolean masking is a key to quick analysis in numpy. Bool mask is an array (1d / 2d / etc) each value is either true or false. This is overlain on the existing data - any true will be included, any false will be excluded.
+
+### Indexing Data Frames
+
+You can use the `setIndex()` function, which is destructive - it doesn't keep the current index.
+
+You can do multi-level index by calling setIndex() with a list of columns that we want to use. You see this with geographical data often.
+
+When you use multi-level indexing you have to pass in your arguments by the level at which you wish to query. Outermost level is level 0.
+
+### Missing Values
